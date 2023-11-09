@@ -26,11 +26,12 @@ modules:
       - hyprland
       - hyprland-protocols
       - xdg-desktop-portal-hyprland
+      - alacritty
       - foot
       - eza
       - polkit-gnome
-      - rust-bat
-      - rust-ripgrep
+      - bat
+      - ripgrep
       - fish
     remove:
       - firefox # default firefox removed in favor of flatpak
