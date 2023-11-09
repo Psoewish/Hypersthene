@@ -22,9 +22,6 @@ modules:
 
   - type: rpm-ostree
     repos:
-      - https://packages.fedoraproject.org/pkgs/hyprland/hyprland/fedora-%OS_VERSION-updates-testing.repo
-      - https://packages.fedoraproject.org/pkgs/hyprland-protocols/hyprland-protocols/fedora-%OS_VERSION-updates-testing.repo
-      - https://packages.fedoraproject.org/pkgs/xdg-desktop-portal-hyprland/xdg-desktop-portal-hyprland/fedora-%OS_VERSION-updates-testing.repo
     install:
       - hyprland
       - hyprland-protocols
