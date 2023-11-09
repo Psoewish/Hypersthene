@@ -27,6 +27,7 @@ modules:
       - hyprland-protocols
       - xdg-desktop-portal-hyprland
       - alacritty
+      - neofetch
       - foot
       - eza
       - polkit-gnome
