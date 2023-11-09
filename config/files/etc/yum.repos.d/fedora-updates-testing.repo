@@ -15,7 +15,7 @@ skip_if_unavailable=False
 name=Fedora $releasever - $basearch - Test Updates
 #baseurl=http://download.example/pub/fedora/linux/updates/testing/$releasever/Everything/$basearch/
 metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-testing-debug-f$releasever&arch=$basearch
-enabled=1
+enabled=0
 countme=1
 repo_gpgcheck=0
 type=rpm
@@ -28,7 +28,7 @@ skip_if_unavailable=False
 name=Fedora $releasever - $basearch - Test Updates
 #baseurl=http://download.example/pub/fedora/linux/updates/testing/$releasever/Everything/$basearch/
 metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-testing-source-f$releasever&arch=$basearch
-enabled=1
+enabled=0
 countme=1
 repo_gpgcheck=0
 type=rpm
