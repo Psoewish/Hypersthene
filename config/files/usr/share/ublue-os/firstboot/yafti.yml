@@ -43,6 +43,63 @@ screens:
         We have detected that you don't have Flathub's repository on your current user account. We will now add that repository to your account.
       actions:
         - run: flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
+  configuration:
+    source: yafti.screen.package
+    values:
+      title: Setting up your system
+      show_terminal: true
+      package_manager: yafti.plugin.run
+      groups:
+        Add input group to current user:
+          description: Adds the input group to your current user. Required by certain controller drivers.
+          default: true
+          packages:
+          - Set input group: sudo -A ujust add-user-to-input-group
+        Greenlight:
+          description: A utility for xCloud and xHome streaming
+          default: false
+          packages:
+          - Retrieve Greenlight: ujust get-greenlight
+        OpenRazer:
+          description: Enables additional capabilities for Razer Hardware
+          default: false
+          packages:
+          -Install OpenRazer: ujust install-openrazer
+        OpenTabletDriver:
+          description: Open source, cross-platform, user-mode tablet driver
+          default: false
+          packages:
+          - Install OpenTabletDriver: ujust install-opentabletdriver
+        Oversteer:
+          description: Application to control supported steering wheels
+          default: false
+          packages:
+          - Install Oversteer: ujust install-oversteer
+        Solaar:
+          description: Application to control Logitech Mice, Keyboards, and Trackpads
+          default: false
+          packages:
+          - Install Solaar: ujust install-solaar
+        Wootility:
+          description: A configurator for Wooting keyboards
+          default: false
+          packages:
+          - Retrieve Wootility: ujust get-wootility
+        Resilio Sync:
+          description: A file synchronization utility powered by BitTorrent
+          default: false
+          packages:
+          - Install Resilio Sync: ujust install-resilio-sync
+        scrcpy:
+          description: scrcpy provides display and control of Android devices connected on USB (or over TCP/IP)
+          default: false
+          packages:
+          - Install scrcpy: ujust install-scrcpy
+        CoreCtrl:
+          description: AMD GPU overclocking utility
+          default: false
+          packages:
+          - Install CoreCtrl: ujust install-corectrl
   applications:
     source: yafti.screen.package
     values:
@@ -53,39 +110,13 @@ screens:
         user: false
         system: true
       groups:
-        Core GNOME Apps:
-          description: Core system applications for the GNOME desktop environment.
+        System Tools:
+          description: System applications and utilities.
           default: true
           packages:
-            - Calculator: org.gnome.Calculator
-            - Calendar: org.gnome.Calendar
-            - Camera: org.gnome.Snapshot
-            - Characters: org.gnome.Characters
-            - Clocks: org.gnome.clocks
-            - Connections: org.gnome.Connections
-            - Contacts: org.gnome.Contacts
-            - Disk Usage Analyzer: org.gnome.baobab
-            - Document Scanner: org.gnome.SimpleScan
-            - Document Viewer: org.gnome.Evince
-            - Extension Manager: com.mattjakeman.ExtensionManager
-            - Font Viewer: org.gnome.font-viewer
-            - Image Viewer: org.gnome.Loupe
-            - Logs: org.gnome.Logs
-            - Maps: org.gnome.Maps
-            - Photos (Organizer): org.gnome.Photos
-            - Sushi (Nautilus Previewer): org.gnome.NautilusPreviewer
-            - Text Editor: org.gnome.TextEditor
-            - Videos (Player): org.gnome.Totem
-            - Weather: org.gnome.Weather
-        System Apps:
-          description: System applications for all desktop environments.
-          default: true
-          packages:
-            - Deja Dup Backups: org.gnome.DejaDup
             - Fedora Media Writer: org.fedoraproject.MediaWriter
             - Flatseal (Permission Manager): com.github.tchx84.Flatseal
             - Font Downloader: org.gustavoperedo.FontDownloader
-            - Mozilla Firefox: org.mozilla.firefox
         Web Browsers:
           description: Additional browsers to complement or replace Firefox.
           default: false
