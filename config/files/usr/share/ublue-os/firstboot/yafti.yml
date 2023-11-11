@@ -1,11 +1,11 @@
-title: Welcome to uBlue
+title: Welcome to Hypersthene
 properties:
   mode: "run-on-change"
 screens:
   first-screen:
     source: yafti.screen.title
     values:
-      title: "Welcome to uBlue (Alpha)"
+      title: "Welcome to Hypersthene"
       icon: "/path/to/icon"
       description: |
         This guided installer will help you get started with your new system.
@@ -140,4 +140,4 @@ screens:
         - "Join the Discord Community":
             run: /usr/bin/xdg-open https://discord.gg/XjG48C7VHx
       description: |
-        Thanks for trying uBlue, we hope you enjoy it!
+        Thanks for trying Hypersthene, we hope you enjoy it!
